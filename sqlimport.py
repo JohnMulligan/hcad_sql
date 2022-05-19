@@ -23,8 +23,6 @@ urls=[i.strip() for i in t.split("\n") if i!='']
 
 years=range(2005,2023)
 
-logfile=open("timings.txt",'a')
-
 timing_step_size=10000
 
 minimum_disk=10000000
@@ -92,13 +90,14 @@ for year in years:
 					c+=1
 					
 					if c%timing_step_size==0:
+						logfile=open("timings.txt",'a')
 						s = os.statvfs('/')
 						df=(s.f_bavail * s.f_frsize) / 1024
 						writestring='\t'.join([str(i) for i in [year,datasetname,tablename,c,time.time()-st,df]])
-						print(writestring)
+						#print(writestring)
 						logfile.write(writestring)
 						logfile.write('\n')
-						
+						logfile.close()
 						if df < minimum_disk:
 							print("below minimum disk space. stopping.")
 							exit()
