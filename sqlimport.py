@@ -22,6 +22,7 @@ urls=[i.strip() for i in t.split("\n") if i!='']
 #print(urls)
 
 years=range(2005,2023)
+years=[2005]
 
 timing_step_size=10000
 
@@ -76,7 +77,7 @@ for year in years:
 				st=time.time()
 				c=0
 				for line in f:
-					vals=[i for i in line.strip().split('\t')]
+					vals=[i for i in line.split('\t') if i!='\n']
 					
 					insertstatement="insert into %s.%s_%s (%s) values (%s)" %(db_name,datasetname,tablename,columnstr2,qmarks)
 					
@@ -104,5 +105,4 @@ for year in years:
 				
 				os.remove(filepath)
 				
-logfile.close()
 cnx.close()
