@@ -1,0 +1,7 @@
+https://download.hcad.org/data/CAMA/YYYY/Real_acct_owner.zip
+https://download.hcad.org/data/CAMA/YYYY/Real_building_land.zip
+https://download.hcad.org/data/CAMA/YYYY/Real_jur_exempt.zip
+https://download.hcad.org/data/CAMA/YYYY/Code_description_real.zip
+https://download.hcad.org/data/CAMA/YYYY/PP_files.zip
+https://download.hcad.org/data/CAMA/YYYY/Code_description_pp.zip
+https://download.hcad.org/data/CAMA/YYYY/Hearing_files.zip
