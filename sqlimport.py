@@ -94,7 +94,7 @@ for year in years:
 						s = os.statvfs('/')
 						df=(s.f_bavail * s.f_frsize) / 1024
 						writestring='\t'.join([str(i) for i in [year,datasetname,tablename,c,time.time()-st,df]])
-						#print(writestring)
+						print(writestring)
 						logfile.write(writestring)
 						logfile.write('\n')
 						logfile.close()
